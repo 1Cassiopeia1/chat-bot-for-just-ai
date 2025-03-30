@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: testTaskJustAI
+  cache:
+    type: simple
+  task:
+    execution:
+      pool:
+        core-size: 5
+        max-size: 10
+        queue-capacity: 500
+
+server:
+  port: 8080
+  forward-headers-strategy: framework
+  servlet:
+    context-path: /api
+
+vk:
+  api:
+    token: ${VK_API_TOKEN:2uwuV4XVsBkXO3I1a2NB4YsdkGg_4r2KznKoXweKFwT6Zzv6b}
+    version: "5.199"
+    base-url: "https://api.vk.com/method"
+  bot:
+    confirmation-code: ${VK_CONFIRMATION_CODE:6d816f2d}
+    group-id: ${VK_GROUP_ID:229893834}
+    secret-key: "MySecretKeyForSigning123!"
